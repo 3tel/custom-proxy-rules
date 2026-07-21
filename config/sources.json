@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "name": "dnsmasq-china-list",
+      "action": "DIRECT",
+      "format": "dnsmasq",
+      "url": "https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf",
+      "enabled": true
+    },
+    {
+      "name": "gfwlist",
+      "action": "PROXY",
+      "format": "gfwlist",
+      "url": "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt",
+      "enabled": true
+    },
+    {
+      "name": "AdGuard DNS filter",
+      "action": "REJECT",
+      "format": "adblock",
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "enabled": true
+    }
+  ]
+}
+

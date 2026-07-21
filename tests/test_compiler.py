@@ -32,8 +32,23 @@ class CompilerTests(unittest.TestCase):
             module = (root / "dist/shadowrocket/direct.module").read_text(encoding="utf-8")
             self.assertIn("DOMAIN-SUFFIX,router.home.arpa,DIRECT", module)
             self.assertIn("IP-CIDR,10.0.0.0/8,DIRECT,no-resolve", module)
+            combined = (root / "dist/shadowrocket/all.module").read_text(encoding="utf-8")
+            self.assertIn("DOMAIN-SUFFIX,router.home.arpa,DIRECT", combined)
             report_file = json.loads((root / "build-report.json").read_text())
             self.assertEqual(report_file["conflict_count"], 0)
+
+    def test_combined_module_keeps_overrides_before_remote_rules(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            compiler = Compiler(root)
+            remote = Rule("DOMAIN-SUFFIX", "ads.example", "REJECT", source="remote", priority=30)
+            private = Rule("DOMAIN", "safe.ads.example", "DIRECT", source="private", priority=210)
+            compiler._write_modules({remote.key: remote, private.key: private})
+            lines = (root / "dist/shadowrocket/all.module").read_text(encoding="utf-8").splitlines()
+            self.assertLess(
+                lines.index("DOMAIN,safe.ads.example,DIRECT"),
+                lines.index("DOMAIN-SUFFIX,ads.example,REJECT"),
+            )
 
 
 if __name__ == "__main__":

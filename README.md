@@ -30,8 +30,15 @@ proxy-rules
 proxy-rules --no-fetch
 ```
 
+一般用户只需订阅合并模块：
+
+```text
+https://raw.githubusercontent.com/3tel/custom-proxy-rules/main/dist/shadowrocket/all.module
+```
+
 生成文件位于 `dist/shadowrocket/`：
 
+- `all.module`（推荐，包含全部规则）
 - `direct.module`
 - `proxy.module`
 - `reject.module`

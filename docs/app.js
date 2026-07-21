@@ -1,5 +1,5 @@
 import QRCode from "qrcode";
-import { CONVERTER_TARGETS, createSubconverterUrl } from "./converter.js";
+import { CONVERTER_TARGETS, createSubconverterUrl, isSubscriptionUrl, subscriptionLines } from "./converter.js";
 
 const form = document.querySelector("#generator");
 const nodeInput = document.querySelector("#nodes");
@@ -13,7 +13,7 @@ let generatedNodes = [];
 let generatedExtension = "conf";
 
 document.querySelector("#clear").addEventListener("click", () => { nodeInput.value = ""; updateSummary(); nodeInput.focus(); });
-nodeInput.addEventListener("input", updateSummary);
+nodeInput.addEventListener("input", () => { updateSummary(); toggleConversionMode(); });
 outputType.addEventListener("change", toggleConversionMode);
 document.querySelectorAll(".rule-tabs button").forEach((button) => button.addEventListener("click", () => {
   document.querySelectorAll(".rule-tabs button,.rule-input").forEach((item) => item.classList.remove("active"));
@@ -26,9 +26,18 @@ form.addEventListener("submit", async (event) => {
   messages.textContent = "";
   try {
     const lines = nodeInput.value.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
-    if (!lines.length) throw new Error("请至少添加一个节点分享链接。");
+    if (!lines.length) throw new Error("请至少添加一个订阅地址或节点分享链接。");
     if (outputType.value === "shadowrocket") {
-      const nodes = uniqueNames(lines.map(parseNode));
+      const subscriptions = lines.filter(isSubscriptionUrl);
+      const nodeLinks = lines.filter((line) => !isSubscriptionUrl(line));
+      let resolvedLinks = nodeLinks;
+      if (subscriptions.length) {
+        const converted = await convertWithSubconverter(subscriptions, "shadowrocket");
+        const convertedLinks = subscriptionLines(converted, decodeBase64);
+        if (!convertedLinks.length) throw new Error("转换服务未返回可识别的节点链接。请检查订阅地址或服务兼容性。");
+        resolvedLinks = [...nodeLinks, ...convertedLinks];
+      }
+      const nodes = uniqueNames(resolvedLinks.map(parseNode));
       generatedNodes = nodes;
       generatedConfig = buildConfig(nodes);
       generatedExtension = "conf";
@@ -67,22 +76,28 @@ toggleConversionMode();
 
 function updateSummary() {
   const count = nodeInput.value.split(/\r?\n/).filter((line) => line.trim()).length;
-  summary.textContent = count ? `已添加 ${count} 条节点链接` : "等待添加节点";
-  status.textContent = outputType.value === "shadowrocket"
+  const hasSubscription = inputLines().some(isSubscriptionUrl);
+  summary.textContent = count ? `已添加 ${count} 条订阅或节点链接` : "等待添加订阅或节点";
+  status.textContent = outputType.value === "shadowrocket" && !hasSubscription
     ? "节点名称、UUID 和密码不会离开此页面。"
     : "生成时会把这些地址发送到你指定的 subconverter 服务。";
 }
 
 function toggleConversionMode() {
-  const remote = outputType.value !== "shadowrocket";
-  document.querySelector("#converter-options").hidden = !remote;
-  document.querySelectorAll(".local-only").forEach((element) => { element.hidden = remote; });
+  const remoteFormat = outputType.value !== "shadowrocket";
+  const needsConverter = remoteFormat || inputLines().some(isSubscriptionUrl);
+  document.querySelector("#converter-options").hidden = !needsConverter;
+  document.querySelectorAll(".local-only").forEach((element) => { element.hidden = remoteFormat; });
   output.hidden = true;
   generatedConfig = "";
   generatedNodes = [];
-  status.textContent = remote
-    ? "此格式将使用你指定的 subconverter 服务转换。"
+  status.textContent = needsConverter
+    ? "订阅地址或所选格式将使用你指定的 subconverter 服务转换。"
     : "Shadowrocket 配置和节点信息只在当前浏览器处理。";
+}
+
+function inputLines() {
+  return nodeInput.value.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
 }
 
 function parseNode(value) {

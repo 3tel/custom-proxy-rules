@@ -1,4 +1,5 @@
 export const CONVERTER_TARGETS = {
+  shadowrocket: { target: "mixed", extension: "conf" },
   clash: { target: "clash", extension: "yaml" }, clashr: { target: "clashr", extension: "yaml" },
   quan: { target: "quan", extension: "conf" }, quanx: { target: "quanx", extension: "conf" },
   loon: { target: "loon", extension: "conf" }, ss: { target: "ss", extension: "txt" },
@@ -10,6 +11,25 @@ export const CONVERTER_TARGETS = {
   trojan: { target: "trojan", extension: "txt" }, v2ray: { target: "v2ray", extension: "txt" },
   mixed: { target: "mixed", extension: "txt" }, auto: { target: "auto", extension: "txt" },
 };
+
+export function isSubscriptionUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
+export function subscriptionLines(value, decode) {
+  const trimmed = value.trim();
+  if (!trimmed) return [];
+  let content = trimmed;
+  if (!/^(?:vless|vmess|trojan|ss):\/\//im.test(content)) {
+    try { content = decode(content.replace(/\s/g, "")); } catch { return []; }
+  }
+  return content.split(/\r?\n/).map((line) => line.trim()).filter((line) => /^(?:vless|vmess|trojan|ss):\/\//i.test(line));
+}
 
 export function createSubconverterUrl(endpointValue, inputs, type) {
   const settings = CONVERTER_TARGETS[type];

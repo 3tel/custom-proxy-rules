@@ -1,4 +1,4 @@
-name: Build rules and deploy website
+name: Update rules
 
 on:
   workflow_dispatch:
@@ -11,9 +11,8 @@ on:
       - "rules/**"
       - "scripts/**"
       - "test/**"
-      - "docs/**"
       - "package.json"
-      - ".github/workflows/build.yml"
+      - ".github/workflows/update-rules.yml"
 
 permissions:
   contents: write
@@ -25,16 +24,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: "22"
+          node-version: "24"
       - name: Test
         run: npm test
-      - name: Build rules
+      - name: Download and build rules
         run: npm run build
       - name: Prepare website
         run: |
@@ -57,7 +56,7 @@ jobs:
           git push
 
   deploy:
-    needs: build
+    needs: update
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -66,4 +65,3 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

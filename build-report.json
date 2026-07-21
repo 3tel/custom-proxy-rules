@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-21T06:44:47+00:00",
+  "generated_at": "2026-07-21T07:50:54Z",
   "counts": {
     "DIRECT": 111098,
     "PROXY": 4015,
-    "REJECT": 158081
+    "REJECT": 158110
   },
   "source_counts": {
-    "AdGuard DNS filter": 158093,
+    "AdGuard DNS filter": 158122,
     "dnsmasq-china-list": 111444,
     "gfwlist": 4021,
     "rules/local/direct.txt": 0,
@@ -18,802 +18,802 @@
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "mypikpak.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "hotcoin.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "futunn.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "futuhn.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "futu5.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "futuniuniu.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "futufin.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "futuesop.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "moomoo.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "lbctrl.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "lbkrs.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "wbrks.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "longbridgeapp.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "longbridgehk.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "itiger.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "itigerup.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "laohu8.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "tigerbbs.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "tigerfintech.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "xiaohu8.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "zhijianfengyi.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "futustatic.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "futuau.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "fututrade.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "fututrustee.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "moomooequity.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "moomootrustee.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "tigerbrokers.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "tigerbrokers.net",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "as.mr",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "bilinovel.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "chinamule.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "furrybar.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "hechaji.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "heyuedi.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "lovart.ai",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "ldplayer.net",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "liuxiaotong.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "nikke-kr.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "nikke-jp.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "nikke-en.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "oklink.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "powercx.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "skyxvpn.com",
-      "kept_action": "PROXY",
-      "kept_source": "gfwlist",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "PROXY",
+      "keptSource": "gfwlist",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "btrbdf.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "foisonad.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "mediav.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "youle55.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "cnzz.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "54kefu.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "admob.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "PROXY",
-      "discarded_source": "gfwlist"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "PROXY",
+      "discardedSource": "gfwlist"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "adsame.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "allyes.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "chshcms.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "dazhantai.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "fastapi.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "incloak.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "PROXY",
-      "discarded_source": "gfwlist"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "PROXY",
+      "discardedSource": "gfwlist"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "linkhaitao.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "madserving.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "rumt-sg.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "stgowan.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "tapdb.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "vid.me",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "PROXY",
-      "discarded_source": "gfwlist"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "PROXY",
+      "discardedSource": "gfwlist"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "wnp.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "ymmobi.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "yunshipei.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "zyiis.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "360ads.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "alimama.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "tradplusad.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "mmaaxx.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "PROXY",
-      "discarded_source": "gfwlist"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "PROXY",
+      "discardedSource": "gfwlist"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "yodo1.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "xdrig.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "yfanads.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "zoly.tech",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "zmqdez.ru",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "richlifeads.ru",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "tapulsads.ru",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "inmense.site",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "dollphoin.site",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "news-cdn.site",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "pglstatp-toutiao.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "adkwai.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "nasimobi.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "ts166.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "adsmogo.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "adsmogo.mobi",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "youmi.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "openinstall.io",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "bxtag.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "umeng.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "cdn-gw-dv.vip",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "gw-dv.vip",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "cartx.cloud",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "getui.net",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "getui.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "tongjiniao.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "rumt-zh.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "effirst.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     },
     {
       "kind": "DOMAIN-SUFFIX",
       "value": "gridsumdissector.com",
-      "kept_action": "REJECT",
-      "kept_source": "AdGuard DNS filter",
-      "discarded_action": "DIRECT",
-      "discarded_source": "dnsmasq-china-list"
+      "keptAction": "REJECT",
+      "keptSource": "AdGuard DNS filter",
+      "discardedAction": "DIRECT",
+      "discardedSource": "dnsmasq-china-list"
     }
   ]
 }

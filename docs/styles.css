@@ -34,6 +34,11 @@ input,select { height:47px; padding:0 13px; font-family:inherit; }
 .rule-options input { width:17px; height:17px; accent-color:var(--accent); }
 .rule-options span { display:flex; flex:1; justify-content:space-between; align-items:center; gap:8px; color:var(--ink); }
 .rule-options small { color:var(--accent); font:9px/1 monospace; }
+.converter-options { grid-column:1/-1; margin-top:22px; padding:16px; border:1px solid #4b3d25; background:#151108; }
+.converter-options>label:first-child { max-width:620px; }
+.converter-options .consent { display:flex; grid-template-columns:18px 1fr; align-items:center; gap:10px; margin-top:14px; cursor:pointer; }
+.converter-options .consent input { width:17px; height:17px; accent-color:var(--accent); }
+.converter-options p { margin:10px 0 0 28px; color:#a99978; font-size:11px; }
 .rule-tabs { display:flex; gap:8px; margin-bottom:12px; }
 .rule-tabs button { border:1px solid #343b34; background:transparent; color:var(--muted); padding:8px 12px; font:700 11px/1 monospace; cursor:pointer; }
 .rule-tabs button.active { background:var(--accent); color:#10140c; border-color:var(--accent); }

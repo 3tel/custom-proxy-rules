@@ -17,6 +17,7 @@ Clash、Surge、Quantumult X 和 sing-box 输出器。
 - 可按需启用广告拦截、代理域名、国内直连和 GEOIP 分流
 - 生成后可直接预览、复制或显示本地二维码，不会自动下载
 - 支持整份配置二维码和逐节点标准分享二维码
+- 提供与 subconverter 对应的客户端生成类型选择
 - 节点凭据只在浏览器本地处理，不上传、不存储
 - GitHub Actions 每日自动测试、构建规则并部署 GitHub Pages
 
@@ -32,6 +33,16 @@ https://3tel.github.io/custom-proxy-rules/
 
 单个节点二维码使用原始标准分享链接，可以直接扫码添加。整份配置二维码受二维码容量和
 Shadowrocket 版本兼容性影响；内容过长时网页会提示改用单节点二维码或复制配置。
+
+## 订阅转换
+
+“生成类型”支持 Shadowrocket 本地配置，以及 Clash、ClashR、Quantumult、Quantumult X、
+Loon、SS、SSD、SSR、Surfboard、Surge 2/3/4、Trojan、V2Ray、Mixed 和 Auto。这些名称及
+目标参数与 [subconverter](https://github.com/tindy2013/subconverter) 保持一致。
+
+Shadowrocket 配置直接在浏览器本地生成。其他格式需要填写用户自行部署的 subconverter
+服务地址；网页只有在用户明确勾选同意后才会发送订阅信息。项目不预设公共转换服务，避免
+把订阅地址、UUID 或密码交给未知第三方。
 
 本地构建需要 Node.js 20 或更高版本：
 

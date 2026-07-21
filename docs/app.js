@@ -49,7 +49,9 @@ form.addEventListener("submit", async (event) => {
     renderOutput();
     await renderQr();
     summary.textContent = outputType.value === "shadowrocket" ? `已生成 ${generatedNodes.length} 个节点` : "订阅转换完成";
-    status.textContent = "结果可预览、复制、扫码或下载。";
+    status.textContent = generatedNodes.length
+      ? "配置可预览、复制或下载；节点可使用标准分享二维码导入。"
+      : "转换结果可预览、复制或下载。";
   } catch (error) {
     messages.textContent = error.message;
   }
@@ -240,15 +242,18 @@ function renderOutput() {
   document.querySelector("#config-preview").textContent = generatedConfig;
   document.querySelector("#config-size").textContent = `${new Blob([generatedConfig]).size.toLocaleString()} bytes`;
   const select = document.querySelector("#qr-target");
-  select.replaceChildren(new Option("完整结果二维码", "config"));
+  select.replaceChildren();
   generatedNodes.forEach((node, index) => select.add(new Option(`节点：${node.name}`, String(index))));
+  document.querySelector("#qr-box").hidden = generatedNodes.length === 0;
+  document.querySelector("#config-import-help").hidden = outputType.value !== "shadowrocket";
   output.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 async function renderQr() {
-  if (!generatedConfig) return;
+  if (!generatedConfig || !generatedNodes.length) return;
   const target = document.querySelector("#qr-target").value;
-  const value = target === "config" ? generatedConfig : generatedNodes[Number(target)]?.uri;
+  const value = generatedNodes[Number(target)]?.uri;
+  if (!value) return;
   const help = document.querySelector("#qr-help");
   try {
     await QRCode.toCanvas(document.querySelector("#qr-code"), value, {
@@ -257,16 +262,14 @@ async function renderQr() {
       width: 320,
       color: { dark: "#0a0c0b", light: "#ffffff" },
     });
-    help.textContent = target === "config"
-      ? "整份配置二维码完全在本地生成；是否能直接识别取决于 Shadowrocket 版本。若无法导入，请改用复制或下载。"
-      : "这是标准节点分享二维码，可在 Shadowrocket 首页使用扫码按钮直接添加。";
+    help.textContent = "这是原始标准节点分享链接，可在 Shadowrocket 首页使用扫码按钮添加。";
   } catch {
     const context = document.querySelector("#qr-code").getContext("2d");
     context.fillStyle = "#fff"; context.fillRect(0, 0, 320, 320);
     context.fillStyle = "#111"; context.font = "14px sans-serif"; context.textAlign = "center";
     context.fillText("内容超过二维码容量", 160, 150);
-    context.fillText("请选择单个节点或使用复制", 160, 176);
-    help.textContent = "整份配置内容太长，无法安全放进一个二维码。请选择上方的单个节点二维码，或复制配置。";
+    context.fillText("请复制节点链接导入", 160, 176);
+    help.textContent = "该节点链接超过二维码容量，请复制原始节点链接导入。";
   }
 }
 

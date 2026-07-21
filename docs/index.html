@@ -76,12 +76,13 @@
             <div><p class="eyebrow">LOCAL OUTPUT</p><h2>配置已在本地生成</h2></div>
             <div class="output-actions"><button type="button" id="copy-config">复制配置</button><button type="button" id="download-config">下载文件</button></div>
           </div>
+          <p id="config-import-help" class="import-help">完整配置不能通过普通二维码导入。请下载 `.conf` 文件，然后从 iOS“文件”中用 Shadowrocket 打开；也可在 Shadowrocket 的“配置”页面导入该文件。</p>
           <div class="output-grid">
             <div class="preview-box"><div class="box-title"><span>配置预览</span><span id="config-size"></span></div><pre id="config-preview" tabindex="0"></pre></div>
-            <div class="qr-box">
+            <div class="qr-box" id="qr-box">
               <div class="box-title"><span>扫码导入</span><select id="qr-target" aria-label="二维码内容"></select></div>
               <canvas id="qr-code" width="320" height="320" aria-label="配置二维码"></canvas>
-              <p id="qr-help">二维码完全在本地生成。整份配置扫码兼容性取决于 Shadowrocket 版本；节点二维码使用标准分享链接。</p>
+              <p id="qr-help">二维码仅包含标准节点分享链接，不会把配置文件正文错误地编码为二维码。</p>
             </div>
           </div>
         </section>

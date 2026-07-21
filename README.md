@@ -16,7 +16,7 @@ Clash、Surge、Quantumult X 和 sing-box 输出器。
 - 静态网页支持 VLESS、VMess、Trojan 和 Shadowsocks 分享链接
 - 可按需启用广告拦截、代理域名、国内直连和 GEOIP 分流
 - 生成后可直接预览、复制或显示本地二维码，不会自动下载
-- 支持整份配置二维码和逐节点标准分享二维码
+- 支持逐节点标准分享二维码；完整配置使用 `.conf` 文件导入
 - 提供与 subconverter 对应的客户端生成类型选择
 - 节点凭据只在浏览器本地处理，不上传、不存储
 - GitHub Actions 每日自动测试、构建规则并部署 GitHub Pages
@@ -31,8 +31,9 @@ https://3tel.github.io/custom-proxy-rules/
 `[Proxy Group]` 和远程分流规则引用的临时配置，并提供预览、复制、二维码和可选下载。
 节点 UUID、密码和服务器信息不会离开当前浏览器。
 
-单个节点二维码使用原始标准分享链接，可以直接扫码添加。整份配置二维码受二维码容量和
-Shadowrocket 版本兼容性影响；内容过长时网页会提示改用单节点二维码或复制配置。
+单个节点二维码使用原始标准分享链接，可以直接扫码添加。Shadowrocket 的扫码入口不接受
+普通二维码中的完整配置正文，因此网页不会再生成无效的“整份配置二维码”。完整配置请下载
+`.conf` 文件，再从 iOS“文件”中用 Shadowrocket 打开，或进入 Shadowrocket 的“配置”页面导入。
 
 ## 订阅转换
 

@@ -39,6 +39,7 @@ input,select { height:47px; padding:0 13px; font-family:inherit; }
 .converter-options .consent { display:flex; grid-template-columns:18px 1fr; align-items:center; gap:10px; margin-top:14px; cursor:pointer; }
 .converter-options .consent input { width:17px; height:17px; accent-color:var(--accent); }
 .converter-options p { margin:10px 0 0 28px; color:#a99978; font-size:11px; }
+.import-help { margin:0 0 18px; padding:12px 14px; border-left:3px solid var(--accent); background:rgba(198,255,61,.06); color:var(--muted); font-size:13px; line-height:1.6; }
 .rule-tabs { display:flex; gap:8px; margin-bottom:12px; }
 .rule-tabs button { border:1px solid #343b34; background:transparent; color:var(--muted); padding:8px 12px; font:700 11px/1 monospace; cursor:pointer; }
 .rule-tabs button.active { background:var(--accent); color:#10140c; border-color:var(--accent); }

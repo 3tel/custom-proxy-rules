@@ -1,4 +1,4 @@
-name: Build rules
+name: Build rules and deploy website
 
 on:
   workflow_dispatch:
@@ -9,15 +9,19 @@ on:
     paths:
       - "config/**"
       - "rules/**"
-      - "src/**"
-      - "tests/**"
-      - "pyproject.toml"
+      - "scripts/**"
+      - "test/**"
+      - "docs/**"
+      - "package.json"
+      - ".github/workflows/build.yml"
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: build-rules
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -25,13 +29,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
+          node-version: "22"
       - name: Test
-        run: python -m unittest discover -s tests
-      - name: Build
-        run: PYTHONPATH=src python -m custom_proxy_rules
+        run: npm test
+      - name: Build rules
+        run: npm run build
+      - name: Prepare website
+        run: |
+          mkdir -p _site/rules
+          cp -R docs/. _site/
+          cp dist/shadowrocket/*.list _site/rules/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
       - name: Commit generated rules
         run: |
           git add -f dist build-report.json
@@ -42,4 +55,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: update generated rules"
           git push
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 

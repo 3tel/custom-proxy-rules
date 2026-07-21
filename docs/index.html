@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="在浏览器本地把代理节点链接和分流规则生成 Shadowrocket 配置。">
+    <meta name="color-scheme" content="dark">
+    <title>Custom Proxy Rules · 配置生成器</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <a class="brand" href="https://github.com/3tel/custom-proxy-rules">CUSTOM / PROXY / RULES</a>
+        <div class="hero-copy">
+          <p class="eyebrow">PRIVATE. LOCAL. READY.</p>
+          <h1>把节点和规则，<br><span>变成一份配置。</span></h1>
+          <p class="lede">粘贴 VLESS、VMess、Trojan 或 Shadowsocks 分享链接，在当前浏览器生成临时 Shadowrocket 配置。没有服务器，也不会上传节点信息。</p>
+        </div>
+        <div class="privacy"><span></span>所有处理仅在你的浏览器中完成</div>
+      </header>
+
+      <form id="generator" novalidate>
+        <section class="panel panel-wide">
+          <div class="step"><span>01</span><div><h2>添加节点</h2><p>每行一个分享链接，可混合填写。</p></div></div>
+          <label class="sr-only" for="nodes">节点分享链接</label>
+          <textarea id="nodes" rows="9" spellcheck="false" autocomplete="off" placeholder="vless://uuid@example.com:443?security=tls&type=ws#我的节点&#10;trojan://password@example.com:443?sni=example.com#备用节点"></textarea>
+          <div class="field-foot"><span>支持 vless:// · vmess:// · trojan:// · ss://</span><button class="text-button" type="button" id="clear">清空</button></div>
+        </section>
+
+        <section class="panel">
+          <div class="step"><span>02</span><div><h2>配置选项</h2><p>选择默认策略和节点组方式。</p></div></div>
+          <div class="fields">
+            <label>配置名称<input id="filename" value="custom-proxy" maxlength="48"></label>
+            <label>节点策略<select id="group-mode"><option value="select">手动选择</option><option value="url-test">自动测速</option><option value="fallback">故障切换</option></select></label>
+            <label>最终策略<select id="final-policy"><option value="PROXY">未匹配走代理</option><option value="DIRECT">未匹配直连</option></select></label>
+            <label>DNS<input id="dns" value="223.5.5.5, 119.29.29.29"></label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="step"><span>03</span><div><h2>临时规则</h2><p>可选，仅写入本次下载的配置。</p></div></div>
+          <div class="rule-tabs" role="tablist" aria-label="规则类型">
+            <button type="button" class="active" data-rule="direct">DIRECT</button>
+            <button type="button" data-rule="proxy">PROXY</button>
+            <button type="button" data-rule="reject">REJECT</button>
+          </div>
+          <label class="sr-only" for="custom-direct">自定义规则</label>
+          <textarea class="rule-input active" id="custom-direct" rows="6" placeholder="nas.home.arpa&#10;*.internal.example&#10;192.168.50.0/24"></textarea>
+          <textarea class="rule-input" id="custom-proxy" rows="6" placeholder="example.com"></textarea>
+          <textarea class="rule-input" id="custom-reject" rows="6" placeholder="ads.example.com"></textarea>
+        </section>
+
+        <section class="result-panel">
+          <div><p class="eyebrow">CONFIGURATION</p><h2 id="summary">等待添加节点</h2><p id="status">节点名称、UUID 和密码不会离开此页面。</p></div>
+          <button class="primary" type="submit">生成并下载 <span>↘</span></button>
+        </section>
+        <div id="messages" role="alert" aria-live="polite"></div>
+      </form>
+
+      <footer><span>custom-proxy-rules</span><a href="https://github.com/3tel/custom-proxy-rules">Source on GitHub ↗</a></footer>
+    </main>
+  </body>
+</html>

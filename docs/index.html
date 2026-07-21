@@ -37,6 +37,13 @@
             <label>最终策略<select id="final-policy"><option value="PROXY">未匹配走代理</option><option value="DIRECT">未匹配直连</option></select></label>
             <label>DNS<input id="dns" value="223.5.5.5, 119.29.29.29"></label>
           </div>
+          <fieldset class="rule-options">
+            <legend>启用的分流规则</legend>
+            <label><input type="checkbox" id="rule-reject" checked><span>广告与追踪拦截<small>REJECT</small></span></label>
+            <label><input type="checkbox" id="rule-proxy" checked><span>代理域名列表<small>PROXY</small></span></label>
+            <label><input type="checkbox" id="rule-direct" checked><span>国内域名直连<small>DIRECT</small></span></label>
+            <label><input type="checkbox" id="rule-geoip" checked><span>中国 IP 直连<small>GEOIP CN</small></span></label>
+          </fieldset>
         </section>
 
         <section class="panel">
@@ -54,9 +61,24 @@
 
         <section class="result-panel">
           <div><p class="eyebrow">CONFIGURATION</p><h2 id="summary">等待添加节点</h2><p id="status">节点名称、UUID 和密码不会离开此页面。</p></div>
-          <button class="primary" type="submit">生成并下载 <span>↘</span></button>
+          <button class="primary" type="submit">生成配置 <span>→</span></button>
         </section>
         <div id="messages" role="alert" aria-live="polite"></div>
+
+        <section class="output-panel" id="output" hidden>
+          <div class="output-head">
+            <div><p class="eyebrow">LOCAL OUTPUT</p><h2>配置已在本地生成</h2></div>
+            <div class="output-actions"><button type="button" id="copy-config">复制配置</button><button type="button" id="download-config">下载文件</button></div>
+          </div>
+          <div class="output-grid">
+            <div class="preview-box"><div class="box-title"><span>配置预览</span><span id="config-size"></span></div><pre id="config-preview" tabindex="0"></pre></div>
+            <div class="qr-box">
+              <div class="box-title"><span>扫码导入</span><select id="qr-target" aria-label="二维码内容"></select></div>
+              <canvas id="qr-code" width="320" height="320" aria-label="配置二维码"></canvas>
+              <p id="qr-help">二维码完全在本地生成。整份配置扫码兼容性取决于 Shadowrocket 版本；节点二维码使用标准分享链接。</p>
+            </div>
+          </div>
+        </section>
       </form>
 
       <footer><span>custom-proxy-rules</span><a href="https://github.com/3tel/custom-proxy-rules">Source on GitHub ↗</a></footer>

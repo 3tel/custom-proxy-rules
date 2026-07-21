@@ -8,10 +8,17 @@
     "build": "node scripts/build-rules.mjs",
     "build:local": "node scripts/build-rules.mjs --no-fetch",
     "build:lists": "node scripts/build-rules.mjs --lists-only",
+    "build:web": "node scripts/build-web.mjs",
     "test": "node --test"
   },
   "engines": {
     "node": ">=20"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
 }

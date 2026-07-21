@@ -31,14 +31,17 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: "24"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
       - name: Test
         run: npm test
       - name: Download and build rules
         run: npm run build
       - name: Prepare website
         run: |
+          npm run build:web
           mkdir -p _site/rules
-          cp -R docs/. _site/
           cp dist/shadowrocket/*.list _site/rules/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -1,8 +1,13 @@
+import QRCode from "qrcode";
+
 const form = document.querySelector("#generator");
 const nodeInput = document.querySelector("#nodes");
 const messages = document.querySelector("#messages");
 const summary = document.querySelector("#summary");
 const status = document.querySelector("#status");
+const output = document.querySelector("#output");
+let generatedConfig = "";
+let generatedNodes = [];
 
 document.querySelector("#clear").addEventListener("click", () => { nodeInput.value = ""; updateSummary(); nodeInput.focus(); });
 nodeInput.addEventListener("input", updateSummary);
@@ -12,21 +17,39 @@ document.querySelectorAll(".rule-tabs button").forEach((button) => button.addEve
   document.querySelector(`#custom-${button.dataset.rule}`).classList.add("active");
 }));
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   messages.textContent = "";
   try {
     const lines = nodeInput.value.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
     if (!lines.length) throw new Error("请至少添加一个节点分享链接。");
     const nodes = uniqueNames(lines.map(parseNode));
-    const config = buildConfig(nodes);
-    const requestedName = document.querySelector("#filename").value.trim() || "custom-proxy";
-    download(`${safeName(requestedName)}.conf`, config);
+    generatedNodes = nodes;
+    generatedConfig = buildConfig(nodes);
+    renderOutput();
+    await renderQr();
     summary.textContent = `已生成 ${nodes.length} 个节点`;
-    status.textContent = "配置已在本地生成并开始下载，页面没有保存节点信息。";
+    status.textContent = "配置仅在当前页面生成，可预览、复制、扫码或下载。";
   } catch (error) {
     messages.textContent = error.message;
   }
+});
+
+document.querySelector("#qr-target").addEventListener("change", renderQr);
+document.querySelector("#copy-config").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(generatedConfig);
+    status.textContent = "配置已复制到剪贴板。";
+  } catch {
+    const range = document.createRange();
+    range.selectNodeContents(document.querySelector("#config-preview"));
+    getSelection().removeAllRanges(); getSelection().addRange(range);
+    status.textContent = "浏览器未允许自动复制，已为你选中配置文本。";
+  }
+});
+document.querySelector("#download-config").addEventListener("click", () => {
+  const requestedName = document.querySelector("#filename").value.trim() || "custom-proxy";
+  download(`${safeName(requestedName)}.conf`, generatedConfig);
 });
 
 function updateSummary() {
@@ -37,11 +60,13 @@ function updateSummary() {
 
 function parseNode(value) {
   const scheme = value.match(/^([a-z0-9-]+):\/\//i)?.[1]?.toLowerCase();
-  if (scheme === "vless") return parseStandard(value, "vless");
-  if (scheme === "trojan") return parseStandard(value, "trojan");
-  if (scheme === "ss") return parseShadowsocks(value);
-  if (scheme === "vmess") return parseVmess(value);
-  throw new Error(`暂不支持的节点链接：${value.slice(0, 18)}…`);
+  let node;
+  if (scheme === "vless") node = parseStandard(value, "vless");
+  else if (scheme === "trojan") node = parseStandard(value, "trojan");
+  else if (scheme === "ss") node = parseShadowsocks(value);
+  else if (scheme === "vmess") node = parseVmess(value);
+  else throw new Error(`暂不支持的节点链接：${value.slice(0, 18)}…`);
+  return { ...node, uri: value };
 }
 
 function parseStandard(value, protocol) {
@@ -129,6 +154,12 @@ function buildConfig(nodes) {
     ...customRules("proxy", "PROXY"),
     ...customRules("direct", "DIRECT"),
   ];
+  const selectedRules = [
+    document.querySelector("#rule-reject").checked ? `RULE-SET,${base}/reject.list,REJECT` : null,
+    document.querySelector("#rule-proxy").checked ? `RULE-SET,${base}/proxy.list,PROXY` : null,
+    document.querySelector("#rule-direct").checked ? `RULE-SET,${base}/direct.list,DIRECT` : null,
+    document.querySelector("#rule-geoip").checked ? "GEOIP,CN,DIRECT" : null,
+  ].filter(Boolean);
   return [
     "# Generated locally by custom-proxy-rules", `# ${new Date().toISOString()}`, "",
     "[General]", "bypass-system = true", "ipv6 = true", `dns-server = ${clean(document.querySelector("#dns").value)}`,
@@ -136,9 +167,43 @@ function buildConfig(nodes) {
     "[Proxy]", ...nodes.map((node) => node.line), "",
     "[Proxy Group]", `PROXY = ${mode}, ${names}${groupExtra}`, "",
     "[Rule]", ...custom,
-    `RULE-SET,${base}/reject.list,REJECT`, `RULE-SET,${base}/proxy.list,PROXY`, `RULE-SET,${base}/direct.list,DIRECT`,
-    "GEOIP,CN,DIRECT", `FINAL,${document.querySelector("#final-policy").value}`, "",
+    ...selectedRules, `FINAL,${document.querySelector("#final-policy").value}`, "",
   ].join("\n");
+}
+
+function renderOutput() {
+  output.hidden = false;
+  document.querySelector("#config-preview").textContent = generatedConfig;
+  document.querySelector("#config-size").textContent = `${new Blob([generatedConfig]).size.toLocaleString()} bytes`;
+  const select = document.querySelector("#qr-target");
+  select.replaceChildren(new Option("整份配置（实验性）", "config"));
+  generatedNodes.forEach((node, index) => select.add(new Option(`节点：${node.name}`, String(index))));
+  output.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function renderQr() {
+  if (!generatedConfig) return;
+  const target = document.querySelector("#qr-target").value;
+  const value = target === "config" ? generatedConfig : generatedNodes[Number(target)]?.uri;
+  const help = document.querySelector("#qr-help");
+  try {
+    await QRCode.toCanvas(document.querySelector("#qr-code"), value, {
+      errorCorrectionLevel: "L",
+      margin: 2,
+      width: 320,
+      color: { dark: "#0a0c0b", light: "#ffffff" },
+    });
+    help.textContent = target === "config"
+      ? "整份配置二维码完全在本地生成；是否能直接识别取决于 Shadowrocket 版本。若无法导入，请改用复制或下载。"
+      : "这是标准节点分享二维码，可在 Shadowrocket 首页使用扫码按钮直接添加。";
+  } catch {
+    const context = document.querySelector("#qr-code").getContext("2d");
+    context.fillStyle = "#fff"; context.fillRect(0, 0, 320, 320);
+    context.fillStyle = "#111"; context.font = "14px sans-serif"; context.textAlign = "center";
+    context.fillText("内容超过二维码容量", 160, 150);
+    context.fillText("请选择单个节点或使用复制", 160, 176);
+    help.textContent = "整份配置内容太长，无法安全放进一个二维码。请选择上方的单个节点二维码，或复制配置。";
+  }
 }
 
 function customRules(id, action) {
@@ -156,7 +221,7 @@ function uniqueNames(nodes) {
     const count = (counts.get(node.name) || 0) + 1; counts.set(node.name, count);
     if (count === 1) return node;
     const name = `${node.name} ${count}`;
-    return { name, line: node.line.replace(/^[^=]+=/, `${name}=`) };
+    return { ...node, name, line: node.line.replace(/^[^=]+=/, `${name}=`) };
   });
 }
 

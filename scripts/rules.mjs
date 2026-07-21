@@ -81,6 +81,11 @@ export function resolveRules(candidates) {
   return { rules: [...selected.values()], conflicts };
 }
 
+export function appendRules(target, additions) {
+  for (const rule of additions) target.push(rule);
+  return target;
+}
+
 function makeRule(kind, value, action, noResolve, source, priority) {
   return {
     kind, value, action, noResolve, source, priority,

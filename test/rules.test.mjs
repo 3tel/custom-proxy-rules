@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { parseRemote, parseRule, resolveRules, RuleParseError } from "../scripts/rules.mjs";
+import { appendRules, parseRemote, parseRule, resolveRules, RuleParseError } from "../scripts/rules.mjs";
 
 test("bare domain becomes suffix rule", () => {
   assert.equal(parseRule("Example.COM", "DIRECT", "test", 100).render(), "DOMAIN-SUFFIX,example.com,DIRECT");
@@ -29,4 +29,12 @@ test("higher priority rule wins", () => {
   const result = resolveRules([remote, local]);
   assert.equal(result.rules[0].action, "DIRECT");
   assert.equal(result.conflicts[0].discardedAction, "REJECT");
+});
+
+test("appending 200,000 rules does not use the function argument stack", () => {
+  const target = [];
+  const additions = Array.from({ length: 200_000 }, (_, index) => index);
+  appendRules(target, additions);
+  assert.equal(target.length, 200_000);
+  assert.equal(target.at(-1), 199_999);
 });

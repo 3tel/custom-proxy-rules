@@ -101,12 +101,3 @@ rules/private > rules/local > REJECT 公开源 > PROXY 公开源 > DIRECT 公开
 `.gitignore` 只能避免普通的 `git add` 误操作。不要使用 `git add -f rules/private`，也不要把
 含有内部信息的生成文件发布到公共仓库。如果需要跨设备同步真实内网规则，建议使用单独的
 私有仓库或加密存储。
-
-## 独立实现说明
-
-本项目借鉴规则项目常见的“远程数据源 + 自动构建 + 模块订阅”工作方式，但解析器、冲突模型、
-目录结构、构建器、测试和文档均为独立实现，不包含其他规则仓库的源码或生成文件。
-
-项目最初受到 [GMOogway/shadowrocket-rules](https://github.com/GMOogway/shadowrocket-rules)
-模块化交付方式的启发。两者没有代码继承关系；本项目从原始公开数据源独立下载、解析和编译，
-并重点提供私有规则隔离、显式优先级与冲突报告。

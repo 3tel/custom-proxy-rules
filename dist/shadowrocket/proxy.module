@@ -584,6 +584,7 @@ DOMAIN-SUFFIX,cenews.eu,PROXY
 DOMAIN-SUFFIX,centauro.com.br,PROXY
 DOMAIN-SUFFIX,centerforhumanreprod.com,PROXY
 DOMAIN-SUFFIX,centralnation.com,PROXY
+DOMAIN-SUFFIX,cerebras.ai,PROXY
 DOMAIN-SUFFIX,certificate-transparency.org,PROXY
 DOMAIN-SUFFIX,cfr.org,PROXY
 DOMAIN-SUFFIX,cg.play-analytics.com,PROXY
@@ -657,6 +658,7 @@ DOMAIN-SUFFIX,chrome.com,PROXY
 DOMAIN-SUFFIX,chromecast.com,PROXY
 DOMAIN-SUFFIX,chromeexperiments.com,PROXY
 DOMAIN-SUFFIX,chromestatus.com,PROXY
+DOMAIN-SUFFIX,cht.com.tw,PROXY
 DOMAIN-SUFFIX,ci-en.jp,PROXY
 DOMAIN-SUFFIX,cia.gov,PROXY
 DOMAIN-SUFFIX,cici.com,PROXY
@@ -2309,7 +2311,6 @@ DOMAIN-SUFFIX,mos.ru,PROXY
 DOMAIN-SUFFIX,mosavi.io,PROXY
 DOMAIN-SUFFIX,movements.org,PROXY
 DOMAIN-SUFFIX,moviefap.com,PROXY
-DOMAIN-SUFFIX,mozilla.ai,PROXY
 DOMAIN-SUFFIX,mpettis.com,PROXY
 DOMAIN-SUFFIX,mpfinance.com,PROXY
 DOMAIN-SUFFIX,mpinews.com,PROXY
@@ -2759,7 +2760,6 @@ DOMAIN-SUFFIX,puffinbrowser.com,PROXY
 DOMAIN-SUFFIX,pullfolio.co,PROXY
 DOMAIN-SUFFIX,pure18.com,PROXY
 DOMAIN-SUFFIX,pureconcepts.net,PROXY
-DOMAIN-SUFFIX,puredns.org,PROXY
 DOMAIN-SUFFIX,pureinsight.org,PROXY
 DOMAIN-SUFFIX,purepdf.com,PROXY
 DOMAIN-SUFFIX,purevpn.com,PROXY
@@ -2801,7 +2801,6 @@ DOMAIN-SUFFIX,radio.co,PROXY
 DOMAIN-SUFFIX,radio.garden,PROXY
 DOMAIN-SUFFIX,radioaustralia.net.au,PROXY
 DOMAIN-SUFFIX,radiohilight.net,PROXY
-DOMAIN-SUFFIX,radiojar.com,PROXY
 DOMAIN-SUFFIX,radioline.co,PROXY
 DOMAIN-SUFFIX,radiovaticana.org,PROXY
 DOMAIN-SUFFIX,radiovncr.com,PROXY
@@ -2908,7 +2907,6 @@ DOMAIN-SUFFIX,sadpanda.us,PROXY
 DOMAIN-SUFFIX,safechat.com,PROXY
 DOMAIN-SUFFIX,safeguarddefenders.com,PROXY
 DOMAIN-SUFFIX,safervpn.com,PROXY
-DOMAIN-SUFFIX,sagernet.org,PROXY
 DOMAIN-SUFFIX,sakuralive.com,PROXY
 DOMAIN-SUFFIX,salvation.org.hk,PROXY
 DOMAIN-SUFFIX,sankakucomplex.com,PROXY
@@ -3824,7 +3822,6 @@ DOMAIN-SUFFIX,wuw.red,PROXY
 DOMAIN-SUFFIX,wwitv.com,PROXY
 DOMAIN-SUFFIX,www.ajsands.com,PROXY
 DOMAIN-SUFFIX,www.bing.com,PROXY
-DOMAIN-SUFFIX,www.clashverge.dev,PROXY
 DOMAIN-SUFFIX,www.hoyolab.com,PROXY
 DOMAIN-SUFFIX,www.lorenzetti.com.br,PROXY
 DOMAIN-SUFFIX,www.moztw.org,PROXY
